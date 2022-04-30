@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    z-index: 1000;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    height: 100px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.header_center {
+	width: 1200px;
+	margin: auto;
+	height: 100px;
+}
+
+.header_top {
+	width: 1200px;
+	height: 100px;
+}
+
+/* 아이콘부분  */
+.icon {
+	width: 250px;
+	height: 100px;
+	float: left;
+}
+
+.icon_A {
+	width: 105px;
+	height: 35px;
+	margin: auto;
+	vertical-align: middle;
+}
+
+.icon_img {
+	display: block;
+	width: 178px;
+	height: 100px;
+}
+
+
+/* 검색부분  */
+.search {
+	width: 25%;
+	height: 100px;
+	float: left;
+}
+
+.search_main {
+	width: 250px;
+	height: 40px;
+	margin-top: 25px;
+	border: 1px solid #ccc;
+}
+
+.search_icon {
+	display: block;
+	width: 25px;
+	height: 25px;
+	margin-top: 7px;
+	margin-left:10px;
+	float: left;
+}
+.search_icon img {
+	width: 25px;
+	height: 25px;
+}
+
+.search_text {
+	display: block;
+	border: none;
+	float: left;
+	margin-left: 10px;
+	width: 205px;
+	height: 40px;
+}
+.search input:focus {
+	outline-color:#00f9da;
+}
+
+/* 관심부분  */
+.interest_A {
+	width: 200px;
+	height: 100px;
+	float: left;
+	margin-left: 250px;
+}
+
+.interest_icon {
+	display:block;
+	margin-left:100px;
+	margin-top:35px;
+	text-decoration-line: none;
+	color: #333;
+}
+
+/* 로그인 부분  */
+.login {
+	width: 200px;
+	height: 100px;
+	float: left;
+}
+.login_icon {
+	display:block;
+	margin-top:35px;
+	text-decoration-line: none;
+	color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

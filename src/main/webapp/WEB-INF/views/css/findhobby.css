@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+.findhobby_body {
+	width: 100%;
+	min-height: 1700px;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.findhobby_body_center {
+	width: 1200px;
+	min-height: 400px; 
+	margin: auto;
+}
+
+
+
+
+/* 인기취미 타이틀 부분 */
+.findhobby_title_A {
+	height: 100px;
+}
+
+.findhobby_tag {
+	font-size :30px;
+	font-weight: bold;
+	color: #333;
+}
+
+
+
+
+
+/* 인기취미 본문 부분 */
+.findhobby_chu {
+	width: 1000px;
+	height: 200px;
+	float: left;
+}
+
+.findhobby_chu_cont_A {
+	width: 1000px;
+	height: 200px;
+}
+
+.findhobby_list_A {
+	width: 150px;
+	float: left;
+	margin-right: 10px;
+}
+
+.findhobby_list_A a {
+	color: #333;
+}
+
+.findhobby_chu_img {
+	width: 150px;
+	height: 100px;
+}
+
+.findhobby_chu_list_sub {
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 5px;
+}
+
+
+/* 더보기 버튼 */
+.findhobby_the_button {
+	width: 150px;
+	height: 122px;
+	line-height: 122px;
+	float: left;
+}
+
+.findhobby_the_button_tag {
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+}
+
+
+
+
+/* 검색어 관련 검색 부분 */
+
+.findhobby_find_sub {
+	height: 100px;
+	font-size :30px;
+	font-weight: bold;
+	color: #333;
+	float: left;
+	width: 1000px;
+}
+
+
+/* 검색 결과 부분 */
+
+.findhobby_yesorno {
+	width: 1000px;
+	float: left;
+}
+
+.findhobby_chu_cont_B {
+	width: 1000px;
+}
+
+.findhobby_atag_imgcont {
+	width: 150px;
+	height: 120px;
+	float: left;
+}
+
+.findhobby_list_B{
+	width: 1000px;
+	height: 120px;
+	padding: 30px 0;
+	border-top: 1px solid #eee;
+}
+
+.findhobby_tag_B {
+	width: 150px;
+	height: 120px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #333;
+}
+
+.findhobby_cont_hobby {
+	display: block;
+	float: left;
+	width: 830px;
+	height: 120px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 120px;
+	margin-left: 20px;
+}
+
+
+/* 더보기 부분 */
+
+.findhobby_toomuch {
+	width: 1000px;
+	margin: 50px auto 150px auto;
+	height: 100px;
+	float: left;
+}
+
+.findhobby_toomuch_tag {
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

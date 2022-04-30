@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+/* 전체 부분 */
+.login_plus_body {
+	width: 100%;
+	margin-top: 50px;
+}
+
+/* 전체 센터 부분 */
+
+.login_plus_center {
+	width: 1200px;
+	margin: auto;
+}
+
+/* 회원가입 제목 부분 */
+
+.login_plus_sub {
+	width: 1000px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+	margin: auto;
+	text-align: center;
+}
+
+/* 회원가입하는 부분 */
+.login_plus_cont {
+	width: 1000px;
+	height: 800px;
+	margin: auto;
+}
+
+.login_member_id,
+.login_member_pw,
+.login_member_pw_plus,
+.login_member_email,
+.login_member_nik,
+.login_member_name,
+.login_member_phone,
+.login_member_birthday,
+.login_member_gender {
+	width: 1000px;
+	height: 40px;
+	margin-top: 20px;
+}
+
+.login_member_id label,
+.login_member_pw label,
+.login_member_pw_plus label,
+.login_member_email label,
+.login_member_nik label,
+.login_member_name label,
+.login_member_phone label,
+.login_member_birthday label,
+.login_member_gender label {
+    font-size: 17px;
+    width: 200px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+}
+
+.login_member_id input,
+.login_member_pw input,
+.login_member_pw_plus input,
+.login_member_email input,
+.login_member_nik input,
+.login_member_name input,
+.login_member_phone input {
+	display: block;
+	float: left;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: 1px solid #eee;
+	font-size: 15px;	
+	width: 400px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 100px;
+    margin-right: 300px;
+}
+
+.login_member_id input:focus,
+.login_member_pw input:focus,
+.login_member_pw_plus input:focus,
+.login_member_email input:focus,
+.login_member_nik input:focus,
+.login_member_name input:focus,
+.login_member_phone input:focus {
+	outline-color:#00f9da;
+}
+
+
+.login_member_birthday input {
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	margin-left: 100px;
+}
+
+.login_member_gender_FM {
+	display: block;
+	float: left;
+	width: 400px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 15px;
+	margin-left: 100px;
+}
+
+.login_member_gender_FM input {
+	width: 50px;
+	height: 20px;
+	vertical-align: middle;
+	margin-top: -5px;
+}
+
+.login_member_submit_cancel
+ {
+	display: block;
+	float:  left;
+	width: 200px;
+	height: 40px;
+	margin-left: 300px;
+	margin-top: 40px;
+}
+
+.login_member_submit {
+	display: block;
+	float:  left;
+	width: 200px;
+	height: 40px;
+	margin-left: 100px;
+	margin-top: 40px;
+}
+
+.login_member_submit_cancel a,
+.login_member_submit button{
+	display: block;
+	border: 1px solid #eee;
+	color: #333;
+	text-align: center;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	font-weight: bold
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

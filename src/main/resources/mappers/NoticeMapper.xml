@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="NoticeMapper">
+	<!-- Beans 클래스의 객체이름(id)과 클래스이름(type)을 명시한다. -->
+	<resultMap id="noticeMap"
+		type="study.spring.findhobby.model.notice">
+		<!-- Beans의 멤버변수(property)이름과 대상 테이블의 컬럼(column)을 연결한다. -->
+		<result property="id" column="id" />
+		<result property="n_subject" column="n_subject" />
+		<result property="n_cont" column="n_cont" />
+		<result property="n_admin" column="n_admin" />
+		<result property="n_joindate" column="n_joindate" />
+		<result property="n_updatedate" column="n_updatedate" />
+		
+	</resultMap>
+
+	<!-- 단일행 조회를 위한 기능 정의 -->
+	<select id="selectItem"
+		parameterType="study.spring.findhobby.model.notice"
+		resultMap="noticeMap">
+		SELECT 
+		
+		id, n_subject, n_cont, n_admin, n_joindate, n_updatedate
+		
+		FROM notice 
+		
+		WHERE id=#{id};
+		
+	</select>
+	
+	<!-- 다중행 조회를 위한 기능 정의 => 최신순으로 조회 (거꾸로 조회 DESC)-->
+	<select id="selectList"
+		parameterType="study.spring.findhobby.model.notice"
+		resultMap="noticeMap">
+		SELECT 
+		id, n_subject, n_cont, n_admin, n_joindate, n_updatedate
+		FROM notice
+
+		<where>
+		
+			<if test="n_admin != null and n_admin != ''">
+				n_admin LIKE concat('%', #{n_admin}, '%') 
+			</if>
+			
+		</where>
+
+		ORDER BY id ASC
+		
+		<if test="listCount > 0" >
+		LIMIT #{offset}, #{listCount}
+		</if>
+		
+	</select>
+	
+	<!-- 다중행 조회를 위한 기능 정의 => 최신순으로 조회 (거꾸로 조회 DESC)-->
+	<select id="selectList_detail"
+		parameterType="study.spring.findhobby.model.notice"
+		resultMap="noticeMap">
+		SELECT 
+		id, n_subject, n_cont, n_admin, n_joindate, n_updatedate
+		FROM notice
+
+		<where>
+		
+			<if test="n_cont != null and n_cont != ''">
+				n_cont LIKE concat('%', #{n_cont}, '%') 
+			</if>
+			
+		</where>
+
+		ORDER BY id DESC
+		
+		<if test="listCount > 0" >
+		LIMIT #{offset}, #{listCount}
+		</if>
+		
+	</select>
+	
+	
+	
+	<!-- 데이터 저장을 위한 기능 정의 -->
+	<insert id="insertItem"
+		parameterType="study.spring.findhobby.model.notice"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO notice 
+		(
+		
+		n_subject, n_cont, n_admin, n_joindate, n_updatedate
+		
+		) 
+		VALUES 
+		(
+		
+		#{n_subject},#{n_cont},#{n_admin},now(),now()
+		
+		);
+	</insert>
+	<!-- 데이터 삭제를 위한 기능 정의 -->
+	<delete id="deleteItem"
+		parameterType="study.spring.findhobby.model.notice">
+		DELETE FROM notice WHERE id=#{id};
+	</delete>
+	<!-- 데이터 갱신을 위한 기능 정의 -->
+	<update id="updateItem"
+		parameterType="study.spring.findhobby.model.notice">
+		
+		UPDATE notice SET  
+		
+		n_subject=#{n_subject},
+		n_cont=#{n_cont},
+		n_admin=#{n_admin},
+		n_updatedate=now()
+		
+		WHERE id=#{id};
+		
+	</update>
+	<!-- 조건에 맞는 데이터 수를 집계하여 int 타입으로 반환한다. count , max , min , sum , avg 함수를 
+		사용한 경우 Mapper 에서는 resultMap이 아닌 resultType 으로 반환한다. -->
+	<!-- 데이터 수 조회하기 -->
+	<select id="selectCountAll"
+		parameterType="study.spring.findhobby.model.notice"
+		resultType="int">
+		SELECT COUNT(*) FROM notice
+
+		<where>
+		
+			<if test="n_cont != null and n_cont != ''">
+				n_cont LIKE concat('%', #{n_cont}, '%') 
+			</if>
+			
+		</where>
+		
+	</select>
+	
+	
+	<!-- 공지 관리자 페이지  -->
+	<select id="selectList_master"
+		parameterType="study.spring.findhobby.model.notice"
+		resultMap="noticeMap">
+		SELECT 
+		id, n_subject, n_cont, n_admin, n_joindate, n_updatedate
+		FROM notice
+
+		<where>
+		
+			<if test="n_admin != null and n_admin != ''
+				and n_subject != null and n_subject != ''
+				and n_cont != null and n_cont != '' ">
+				n_admin LIKE concat('%', #{n_admin}, '%') OR n_subject LIKE concat('%', #{n_subject}, '%') OR n_cont LIKE concat('%', #{n_cont}, '%') 
+			</if>
+			
+		</where>
+
+		ORDER BY id ASC
+		
+		<if test="listCount > 0" >
+		LIMIT #{offset}, #{listCount}
+		</if>
+		
+	</select>
+	
+	<select id="selectCountAll_master"
+		parameterType="study.spring.findhobby.model.notice"
+		resultType="int">
+		SELECT COUNT(*) FROM notice
+
+		<where>
+		
+			<if test="n_admin != null and n_admin != ''
+				and n_subject != null and n_subject != ''
+				and n_cont != null and n_cont != '' ">
+				n_admin LIKE concat('%', #{n_admin}, '%') OR n_subject LIKE concat('%', #{n_subject}, '%') OR n_cont LIKE concat('%', #{n_cont}, '%') 
+			</if>
+			
+		</where>
+		
+	</select>
+
+</mapper>

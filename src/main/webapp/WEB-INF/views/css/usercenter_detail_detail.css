@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+/* 전체 부분 */
+.usercenter_detail_detail_body {
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 400px;
+}
+
+/* 전체 센터 부분 */
+
+.usercenter_detail_detail_body_center {
+	width: 1200px;
+	margin: auto;
+}
+
+/* 제목 부분 */
+.usercenter_detail_detail_sub {
+	width: 1000px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+	margin: auto;
+}
+
+/* 공지사항 본문 부분 */
+.usercenter_detail_detail_cont {
+	width: 1000px;
+	min-height: 200px;
+	margin: auto;
+}
+
+.usercenter_detail_detail_cont_admin {
+	width: 1000px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 15px;
+}
+
+.usercenter_detail_detail_cont_admin {
+	width: 1000px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 15px;
+}
+
+.usercenter_detail_detail_cont_sub {
+	width: 1000px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 15px;
+}
+
+.usercenter_detail_detail_cont_cont {
+	width: 1000px;
+	min-height: 100px;
+	font-size: 15px;
+	border: 1px solid #eee;
+	margin-top: 50px;
+}
+
+.usercenter_detail_detail_cont_cont_cont {
+	width: 900px;
+	margin: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

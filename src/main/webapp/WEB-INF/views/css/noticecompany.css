@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/* 전체 부분 */
+.noticecompany_body {
+	width: 100%;
+	margin-top: 50px;
+}
+
+/* 전체 센터 부분 */
+
+.noticecompany_body_center {
+	width: 1200px;
+	margin: 0 auto 150px auto;
+}
+
+/* 회사 개요 부분 */
+
+.noticecompany_title {
+	width: 1000px;
+	height: 50px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+/* 회사명 부분 */
+.noticecompany_name {
+	height: 250px;
+}
+
+.noticecompany_name_list{
+	height: 250px;
+}
+
+.noticecompany_name_list li {
+	height: 50px;
+	line-height: 50px;
+	font-weight: bold;
+}
+
+/* 대표 사업 표기 부분 */
+
+.noticecompany_name_represent_A ,
+.noticecompany_name_represent_B {
+	height: 100px;
+	line-height: 100px;
+	font-weight: bold;
+}
+
+.noticecompany_name_represent_A {
+	font-size: 30px;
+}
+
+.noticecompany_name_represent_B {
+	font-size: 20px;
+}
+
+/* 개요 설명 부분 */
+
+.noticecompany_name_find_img {
+	width: 100%;
+	height: 500px;
+}
+
+.noticecompany_name_find_img img{
+	width: 100%;
+	height: 500px;
+}
+
+.noticecompany_name_find_cont {
+	height: 50px;
+	line-height: 50px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+/* 본문 제목 부분 */
+.master_qna_main_cont {
+	width: 1600px;
+	height: 30px;
+	margin-top:20px;
+	float: left;
+}
+
+.master_qna_main_cont_subpart {
+	width: 1600px;
+	height: 30px;
+}
+
+.master_qna_main_cont_subpart li {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	border: 1px solid #eee;
+	text-align: center;
+}
+
+.master_qna_main_cont_subpart li:nth-child(1),
+.master_qna_main_cont_subpart li:nth-child(5),
+.master_qna_main_cont_subpart li:nth-child(9),
+.master_qna_main_cont_subpart li:nth-child(10) {
+	width: 80px;
+} 
+
+.master_qna_main_cont_subpart li:nth-child(2),
+.master_qna_main_cont_subpart li:nth-child(8){
+	width: 150px;
+	padding: 0 10px;
+}
+
+.master_qna_main_cont_subpart li:nth-child(3),
+.master_qna_main_cont_subpart li:nth-child(6) {
+	width: 300px;
+	padding: 0 10px;
+}
+
+.master_qna_main_cont_subpart li:nth-child(4),
+.master_qna_main_cont_subpart li:nth-child(7) {
+	width: 100px;
+} 
+
+/* 본문 내용 부분 */
+
+.master_qna_main_cont_part {
+	width: 1600px;
+	float: left;
+}
+
+
+.master_qna_main_cont_part_cont {
+	width: 1600px;
+	height: 400px;
+}
+
+.master_qna_main_cont_part_cont_detail_part {
+	color: #333;
+}
+
+.master_qna_main_cont_part_cont li {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	border: 1px solid #eee;
+	text-align: center;
+}
+
+.master_qna_main_cont_part_cont_first,
+.master_qna_main_cont_part_cont_detail_part li:nth-child(4) {
+	width: 80px;
+}
+
+.master_qna_main_cont_part_cont_detail_part li:nth-child(1),
+.master_qna_main_cont_part_cont_detail_part li:nth-child(7){
+	width: 150px;
+	padding: 0 10px;
+}
+
+.master_qna_main_cont_part_cont_detail_part li:nth-child(2),
+.master_qna_main_cont_part_cont_detail_part li:nth-child(5) {
+	width: 300px;
+	padding: 0 10px;
+}
+
+.master_qna_main_cont_part_cont_detail_part li:nth-child(3),
+.master_qna_main_cont_part_cont_detail_part li:nth-child(6) {
+	width: 100px;
+}
+
+.master_qna_main_cont_part_cont_last_update {
+	width: 80px;
+	height: 30px;
+}
+
+.master_qna_main_cont_part_cont_last_answer {
+	width: 80px;
+	height: 30px;
+	margin-right: 50px;
+}
+
+.master_qna_main_cont_part_cont_last_update a,
+.master_qna_main_cont_part_cont_last_answer a{
+	display: block;
+	width: 60px;
+	height: 25px;
+	line-height: 25px;
+	margin: auto;
+	border: 1px solid #00f9da;
+	border-radius: 3px;
+	text-align: center;
+	font-size: 14px;
+	margin-top: 1.25px;
+	color: #333;
+}
+
+/* 말줄임 처리 */
+.master_qna_main_cont_part_cont_detail_part li{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+
+
+
+
+
+

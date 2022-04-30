@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+/* 전체 부분 */
+.master_user_plus_body {
+	width: 1600px;
+	margin-left: 250px;
+	margin-top: 10px;
+}
+
+/* 제목부분 */
+.master_main_sub {
+	width: 1600px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+/* 본문파트 */
+.master_user_plus_cont {
+	width: 1000px;
+	height: 650px;
+	margin-left: 300px;
+}
+
+.master_member_id,
+.master_member_pw,
+.master_member_pw_plus,
+.master_member_email,
+.master_member_nik,
+.master_member_name,
+.master_member_phone,
+.master_member_birthday,
+.master_member_gender {
+	width: 1000px;
+	height: 40px;
+	margin-top: 20px;
+}
+
+.master_member_id label,
+.master_member_pw label,
+.master_member_pw_plus label,
+.master_member_email label,
+.master_member_nik label,
+.master_member_name label,
+.master_member_phone label,
+.master_member_birthday label,
+.master_member_gender label {
+    font-size: 17px;
+    width: 200px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+}
+
+.master_member_id input,
+.master_member_pw input,
+.master_member_pw_plus input,
+.master_member_email input,
+.master_member_nik input,
+.master_member_name input,
+.master_member_phone input {
+	display: block;
+	float: left;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: 1px solid #eee;
+	font-size: 15px;	
+	width: 400px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 100px;
+}
+
+.master_member_id input:focus,
+.master_member_pw input:focus,
+.master_member_pw_plus input:focus,
+.master_member_email input:focus,
+.master_member_nik input:focus,
+.master_member_name input:focus,
+.master_member_phone input:focus {
+	outline-color:#00f9da;
+}
+
+
+.master_member_birthday input {
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	margin-left: 100px;
+}
+
+.master_member_gender_FM {
+	display: block;
+	float: left;
+	width: 400px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 15px;
+	margin-left: 100px;
+}
+
+.master_member_gender_FM input {
+	width: 50px;
+	height: 20px;
+	vertical-align: middle;
+	margin-top: -5px;
+}
+
+.master_member_submit_cancel
+ {
+	display: block;
+	float:  left;
+	width: 200px;
+	height: 40px;
+	margin-left: 200px;
+	margin-top: 40px;
+}
+
+.master_member_submit {
+	display: block;
+	float:  left;
+	width: 200px;
+	height: 40px;
+	margin-left: 100px;
+	margin-top: 40px;
+}
+
+.master_member_submit_cancel a,
+.master_member_submit button{
+	display: block;
+	border: 1px solid #eee;
+	color: #333;
+	text-align: center;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	font-weight: bold
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+
+/* 본문부분 */
+.master_notice_plus_cont {
+	width: 1600px;
+	height: 600px;
+}
+
+.master_notice_plus_cont_sub {
+	width: 1600px;
+	height: 150px;
+	float: left;
+	margin-top: 20px;
+}
+
+.master_notice_plus_cont_cont {
+	width: 1600px;
+	height: 300px;
+	float: left;
+	margin-top: 20px;
+}
+
+.master_notice_plus_cont_name{
+	width: 1600px;
+	height: 40px;
+	float: left;
+	margin-top: 20px;
+}
+
+.master_notice_plus_cont_sub label,
+.master_notice_plus_cont_cont label,
+.master_notice_plus_cont_name label
+{
+	display: block;
+	width: 200px;
+	height: 40px;
+	border: 1px solid #eee;
+	float: left;
+	text-align: center;
+	line-height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.master_notice_plus_cont_name input {
+	width: 400px;
+	height: 40px;
+	border:none;
+	border-bottom: 1px solid #eee;
+	float: left;
+	margin-left: 50px;
+}
+
+.master_notice_plus_cont_sub_textarea {
+	display: block;
+	width: 400px;
+	height: 150px;
+	border: 1px solid #eee;
+	float: left;
+	margin-left: 50px;
+	word-break: break-word;
+	word-wrap:break-word;
+	padding: 0 10px;
+}
+
+.master_notice_plus_cont_cont_textarea {
+	display: block;
+	width: 400px;
+	height: 300px;
+	border: 1px solid #eee;
+	float: left;
+	margin-left: 50px;
+	word-break: break-word;
+	word-wrap:break-word;
+	padding: 0 10px;
+}
+
+
+/* 취소 , 추가버튼 */
+.master_notice_plus_cont_cancel
+ {
+	display: block;
+	float:  left;
+	width: 200px;
+	height: 40px;
+	margin-left: 250px;
+	margin-top: 40px;
+}
+
+.master_notice_plus_cont_submit {
+	display: block;
+	float:  left;
+	width: 200px;
+	height: 40px;
+	margin-left: 100px;
+	margin-top: 40px;
+}
+
+.master_notice_plus_cont_cancel a,
+.master_notice_plus_cont_submit button{
+	display: block;
+	border: 1px solid #eee;
+	color: #333;
+	text-align: center;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	font-weight: bold
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

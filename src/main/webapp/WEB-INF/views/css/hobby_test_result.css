@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+/* 전체 부분 */
+.hobby_test_result_body {
+	width: 100%;
+	margin-top: 50px;
+}
+
+/* 전체 센터 부분 */
+
+.hobby_test_result_body_center {
+	width: 1200px;
+	margin: auto;
+}
+
+/* 제목 부분 */
+.hobby_test_result_sub {
+	width: 1000px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+/* MBTI 설명 부분 */
+.hobby_test_result_sub_one {
+	width: 1000px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.hobby_test_result_sub_two {
+	width: 1000px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+/* MBTI 취미 추천 부분 */
+
+.hobby_test_result_cont {
+	width: 1000px;
+	height: 350px;
+	margin: 100px auto 0 auto;
+}
+
+.hobby_test_result_cont_part {
+	width: 1000px;
+	height: 350px;
+}
+
+.hobby_test_result_cont_part_A,
+.hobby_test_result_cont_part_B {
+	width: 45%;
+	height: 300px;
+	float: left;
+	text-align: center;
+	border: 1px solid #eee;
+	margin: 0 24px;
+}
+
+
+.hobby_test_result_cont_part_A a,
+.hobby_test_result_cont_part_B a{
+	color: #333;
+}
+
+.hobby_test_result_cont_part_A_img {
+	width: 280px;
+	height: 200px;
+	border: 1px solid #eee;
+	margin-top: 50px;
+}
+
+.hobby_test_result_cont_part_A_sub {
+	text-align: center;
+	font-weight: bold;
+}
+
+/* 추가 설명 부분 */
+.hobby_test_result_sub_explan {
+	width: 950px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 15px;
+	font-weight: bold;
+	margin: 0 auto 50px auto;
+}
+
+
+/* 모든 페이지로 이동 */
+
+
+.hobby_test_result_allhobby {
+	display: block;
+	width: 900px;
+	height: 100px;
+	margin: auto;
+	font-weight: bold;
+	font-size: 20px;
+	border-top: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.hobby_test_result_allhobby_atag {
+	line-height: 100px;
+	color: #00f9da;
+}
+
+
+
+
+
+
+
+
+
+
+

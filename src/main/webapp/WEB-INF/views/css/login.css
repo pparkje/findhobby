@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+.login_body {
+	width: 100%;
+	height: 100%;
+}
+
+.login_body_center {
+	width: 1000px;
+	height: 800px;
+	margin: auto;
+}
+
+/* 로그인 타이틀 */
+.login_title {
+	width: 1000px;
+	height: 100px;
+	color: #333;
+	font-size: 30px;
+	line-height: 100px;
+	font-weight: bold;
+	margin-top: 100px;
+	text-align: center;
+}
+
+/* 로그인 아이디 부분  */
+
+.login_id {
+ 	width: 500px;
+ 	height: 150px;
+ 	line-height: 150px;
+ 	margin: auto;
+ 	
+}
+
+.login_id label {
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.login_id input {
+	border:  none;
+	border-bottom: 1px solid #eee;
+	margin-left: 100px;
+	width: 300px;
+	height: 30px;
+}
+
+.login_id input:focus {
+	outline-color:#00f9da;
+}
+
+/* 로그인 패스워드 부분 */
+
+.login_password {
+ 	width: 500px;
+ 	height: 150px;
+ 	line-height: 150px;
+ 	margin: auto;
+}
+
+.login_password label {
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.login_password input {
+	border:  none;
+	border-bottom: 1px solid #eee;
+	margin-left: 80px;
+	width: 300px;
+	height: 30px;
+}
+
+.login_password input:focus {
+	outline-color:#00f9da;
+}
+
+/* 회원가입 , ID / PW 부분 */
+.login_new_member {
+	height: 30px;
+	line-height: 30px;
+	margin-left: 250px;
+}
+
+.login_new_member a{
+	color: #333;
+}
+
+.login_IDPW_find {
+	height: 30px;
+	line-height: 30px;
+	margin-left: 250px;
+}
+
+.login_IDPW_find a{
+	color: #333;
+}
+
+/* 로그인 버튼 */
+
+.login_submit {
+	width: 500px;
+ 	height: 150px;
+ 	line-height: 150px;
+ 	margin: auto;
+}
+
+.login_submit button {
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	border: 1px solid #eee;
+	margin-left: 150px;
+}
+
+
+/* 회원탈퇴 부분 */
+.login_password_A {
+ 	width: 500px;
+ 	height: 150px;
+ 	line-height: 150px;
+ 	margin: auto;
+}
+
+.login_password_A label {
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.login_password_A input {
+	border:  none;
+	border-bottom: 1px solid #eee;
+	margin-left: 60px;
+	width: 300px;
+	height: 30px;
+}
+
+.login_password_A input:focus {
+	outline-color:#00f9da;
+}
+
+
+
+
+
+

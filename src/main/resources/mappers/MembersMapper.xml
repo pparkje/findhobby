@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="MembersMapper">
+	<resultMap id="MembersMap"
+		type="study.spring.findhobby.model.members">
+		<!-- Beans의 멤버변수(property)이름과 대상 테이블의 컬럼(column)을 연결한다. -->
+		<result property="id" column="id" />
+		<result property="m_id" column="m_id" />
+		<result property="m_pw" column="m_pw" />
+		<result property="m_name" column="m_name" />
+		<result property="m_username" column="m_username" />
+		<result property="m_email" column="m_email" />
+		<result property="m_phone" column="m_phone" />
+		<result property="m_birthday" column="m_birthday" />
+		<result property="m_modifydate" column="m_modifydate" />
+		<result property="m_joindate" column="m_joindate" />
+		<result property="m_enddate" column="m_enddate" />
+		<result property="m_end" column="m_end" />
+		<result property="m_gender" column="m_gender" />
+	</resultMap>
+	
+
+	<!-- 단일행 조회를 위한 기능 정의 -->
+	<select id="selectItem"
+		parameterType="study.spring.findhobby.model.members"
+		resultMap="MembersMap">
+		SELECT 
+		
+		id,m_id,m_pw,m_name,m_username,m_email,m_phone,m_birthday,m_modifydate,m_joindate,m_enddate,m_end,m_gender
+		
+		FROM members
+		
+		<where>
+		
+			<if test=" m_id != null and m_id != '' and m_pw != null and m_pw != '' ">
+				m_id LIKE concat('%', #{m_id}, '%') AND m_pw=md5(#{m_pw})  
+			</if>
+			
+			<if test=" id != null and id != '' ">
+				id = #{id}
+			</if>
+			
+			<!-- 아이디 찾기 -->
+			<if test=" m_name != null and m_name != '' and m_email != null and m_email != '' ">
+				m_name LIKE concat('%', #{m_name}, '%') AND m_email LIKE concat('%', #{m_email}, '%')
+			</if>
+			
+			
+			
+		</where>
+		
+	</select>
+	
+	<!-- 비밀번호 관련 조회를 위한 기능 정의 -->
+	<select id="selectItem_password"
+		parameterType="study.spring.findhobby.model.members"
+		resultMap="MembersMap">
+		SELECT 
+		
+		id,m_id,m_pw,m_name,m_username,m_email,m_phone,m_birthday,m_modifydate,m_joindate,m_enddate,m_end,m_gender
+		
+		FROM members
+		
+		<where>
+		
+			<!-- 비밀번호 찾기 -->
+			<if test=" m_id != null and m_id != '' and m_name != null and m_name != '' and m_email != null and m_email != ''">
+				m_id LIKE concat('%', #{m_id}, '%')	AND m_name LIKE concat('%', #{m_name}, '%') AND m_email LIKE concat('%', #{m_email}, '%')
+			</if>
+			
+		</where>
+		
+	</select>
+	
+	<!-- 다중행 조회를 위한 기능 정의 -->
+	<select id="selectList"
+		parameterType="study.spring.findhobby.model.members"
+		resultMap="MembersMap">
+		SELECT 
+
+		id,m_id,m_pw,m_name,m_username,m_email,m_phone,m_birthday,m_modifydate,m_joindate,m_enddate,m_end,m_gender
+		
+		FROM members
+		
+		<where>
+			<if test="m_name != null and m_name != ''">
+				m_name LIKE concat('%', #{m_name}, '%')
+			</if>
+			<if test="m_id != null and m_id != ''">
+				m_id LIKE concat('%', #{m_id}, '%')
+			</if>
+			
+		</where>
+		
+		ORDER BY id ASC
+		
+		<if test="listCount > 0" >
+		LIMIT #{offset}, #{listCount}
+		</if>
+	</select>
+	
+	<!-- 데이터 저장을 위한 기능 정의 -->
+	<insert id="insertItem"
+		parameterType="study.spring.findhobby.model.members"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO members (
+		
+			m_id,m_pw,m_name,m_username,m_email,m_phone,
+			m_birthday,m_modifydate,m_joindate,m_enddate,
+			m_end,m_gender
+			
+		) 
+		VALUES (
+		
+			#{m_id}, md5(#{m_pw}), #{m_name}, #{m_username}, #{m_email}, #{m_phone}, 
+			#{m_birthday}, DATE_FORMAT(now(), '%Y-%m-%d'), DATE_FORMAT(now(), '%Y-%m-%d'), NULL, 
+			'N', #{m_gender}
+			
+		)
+	</insert>
+	
+	<!-- 데이터 삭제를 위한 기능 정의 -->
+	<delete id="deleteItem"
+		parameterType="study.spring.findhobby.model.members">
+		DELETE FROM members WHERE id=#{id}
+	</delete>
+	
+	<!-- 데이터 갱신을 위한 기능 정의 -->
+	<update id="updateItem"
+		parameterType="study.spring.findhobby.model.members">
+		UPDATE members SET 
+		
+		m_id = #{m_id},
+	    m_pw = md5(#{m_pw}),
+	    m_name = #{m_name},
+	    m_username = #{m_username},
+	    m_email = #{m_email},
+	    m_phone = #{m_phone},
+	    m_birthday = #{m_birthday},
+	    m_modifydate = DATE_FORMAT(now(), '%Y-%m-%d'),
+	    m_gender = #{m_gender}
+        
+		WHERE id=#{id}
+	</update>
+	
+	<!-- 관리자 페이지 회원정보 수정 -->
+	<update id="updateItem_master"
+		parameterType="study.spring.findhobby.model.members">
+		UPDATE members SET 
+		
+		m_id = #{m_id},
+	    m_name = #{m_name},
+	    m_username = #{m_username},
+	    m_email = #{m_email},
+	    m_phone = #{m_phone},
+	    m_birthday = #{m_birthday},
+	    m_modifydate = DATE_FORMAT(now(), '%Y-%m-%d'),
+	    m_gender = #{m_gender}
+        
+		WHERE id=#{id}
+	</update>
+	
+	<!-- 비밀번호 변경을 위한 정의 -->
+	<update id="updateItem_password"
+		parameterType="study.spring.findhobby.model.members">
+		UPDATE members SET 
+		
+	    m_pw = md5(#{m_pw}),
+	    m_modifydate = DATE_FORMAT(now(), '%Y-%m-%d')
+        
+		WHERE id=#{id}
+	</update>
+	
+	<!-- 회원탈퇴시 삭제 말고 수정 -->
+	<update id="updateItem_delete"
+		parameterType="study.spring.findhobby.model.members">
+		UPDATE members SET 
+		
+	    m_modifydate = DATE_FORMAT(now(), '%Y-%m-%d'),
+	    m_enddate = DATE_FORMAT(now(), '%Y-%m-%d'),
+	   	m_end = 'Y'
+        
+		WHERE id=#{id}
+	</update>
+	
+	<!-- 데이터 수 조회하기 -->
+	<select id="selectCountAll"
+		parameterType="study.spring.findhobby.model.members"
+		resultType="int">
+		SELECT COUNT(*) FROM members
+		
+		<where>
+		
+			<!-- 로그인시 아이디 , 비번 , 회원탈퇴여부 확인 -->
+			<if test=" m_id != null and m_id != '' and m_pw != null and m_pw != '' ">
+				m_id LIKE concat('%', #{m_id}, '%') AND m_pw=md5(#{m_pw})  AND m_end='N'
+			</if>
+			
+			<!-- 아이디 찾기 -->
+			<if test=" m_name != null and m_name != '' and m_email != null and m_email != '' ">
+				m_name LIKE concat('%', #{m_name}, '%') AND m_email LIKE concat('%', #{m_email}, '%')
+			</if>
+			
+			<!-- 회원수정전 비밀번호 확인 , 회원 탈퇴시 id 값 확인 -->
+			<if test=" id != null and id != '' and m_pw != null and m_pw != '' ">
+				id LIKE concat('%', #{id}, '%') AND m_pw = md5(#{m_pw})
+			</if>
+			
+			<!-- 비밀번호 찾기 -->
+			<if test=" m_id != null and m_id != '' and m_name != null and m_name != '' and m_email != null and m_email != ''">
+				m_id LIKE concat('%', #{m_id}, '%')	AND m_name LIKE concat('%', #{m_name}, '%') AND m_email LIKE concat('%', #{m_email}, '%')
+			</if>
+			
+			
+			
+			
+		</where>
+	</select>
+	
+	<!-- 비밀번호 찾기 관련 데이터 수 조회하기 -->
+	<select id="selectCountAll_password"
+		parameterType="study.spring.findhobby.model.members"
+		resultType="int">
+		SELECT COUNT(*) FROM members
+		
+		<where>
+			
+			<!-- 비밀번호 찾기 -->
+			<if test=" m_id != null and m_id != '' and m_name != null and m_name != '' and m_email != null and m_email != ''">
+				m_id LIKE concat('%', #{m_id}, '%')	AND m_name LIKE concat('%', #{m_name}, '%') AND m_email LIKE concat('%', #{m_email}, '%')
+			</if>
+			
+		</where>
+	</select>
+	
+	
+	
+	
+	
+	<!-- 관리자페이지 회원관리 부분 -->
+	<select id="selectList_master"
+		parameterType="study.spring.findhobby.model.members"
+		resultMap="MembersMap">
+		SELECT 
+
+		id,m_id,m_pw,m_name,m_username,m_email,m_phone,m_birthday,m_modifydate,m_joindate,m_enddate,m_end,m_gender
+		
+		FROM members
+		
+		<where>
+		
+			<if test="m_id != null and m_id != '' and
+			m_name != null and m_name != '' and
+			m_username != null and m_username != '' and
+			m_email != null and m_email != '' and
+			m_phone != null and m_phone != '' ">
+				m_id LIKE concat('%', #{m_id}, '%') 
+				OR m_name LIKE concat('%', #{m_name}, '%')
+				OR m_username LIKE concat('%', #{m_username}, '%')
+				OR m_email LIKE concat('%', #{m_email}, '%')
+				OR m_phone LIKE concat('%', #{m_phone}, '%')
+				 
+			</if>
+			
+		</where>
+		
+		ORDER BY id ASC
+		
+		<if test="listCount > 0" >
+		LIMIT #{offset}, #{listCount}
+		</if>
+	</select>
+	
+	<select id="selectCountAll_master"
+		parameterType="study.spring.findhobby.model.members"
+		resultType="int">
+		SELECT COUNT(*) FROM members
+		
+		<where>
+			
+			<!-- 비밀번호 찾기 -->
+			<if test=" m_id != null and m_id != '' and m_name != null and m_name != '' and m_email != null and m_email != ''">
+				m_id LIKE concat('%', #{m_id}, '%')	AND m_name LIKE concat('%', #{m_name}, '%') AND m_email LIKE concat('%', #{m_email}, '%')
+			</if>
+			
+		</where>
+	</select>
+	
+	<select id="selectItem_qna_master"
+		parameterType="study.spring.findhobby.model.members"
+		resultMap="MembersMap">
+		SELECT 
+		
+		id,m_id,m_pw,m_name,m_username,m_email,m_phone,m_birthday,m_modifydate,m_joindate,m_enddate,m_end,m_gender
+		
+		FROM members
+		
+		<where>
+		
+			<if test=" m_id != null and m_id != '' ">
+		
+				m_id LIKE concat('%', #{m_id}, '%') 
+				
+			</if>
+		</where>
+		
+	</select>
+
+
+</mapper>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="InterestMapper">
+	<!-- Beans 클래스의 객체이름(id)과 클래스이름(type)을 명시한다. -->
+	<resultMap id="interestMap"
+		type="study.spring.findhobby.model.interest">
+		<!-- Beans의 멤버변수(property)이름과 대상 테이블의 컬럼(column)을 연결한다. -->
+		<result property="id" column="id" />
+		<result property="i_user_agent" column="i_user_agent" />
+		<result property="i_browser" column="i_browser" />
+		<result property="i_os" column="i_os" />
+		<result property="i_device" column="i_device" />
+		<result property="i_h_id" column="i_h_id" />
+		<result property="i_h_name" column="i_h_name" />
+		<result property="i_h_image_a" column="i_h_image_a" />
+		
+	</resultMap>
+
+	<!-- 단일행 조회를 위한 기능 정의 -->
+	<select id="selectItem"
+		parameterType="study.spring.findhobby.model.interest"
+		resultMap="interestMap">
+		SELECT 
+		
+		id,i_user_agent,i_browser,i_os,i_device,i_h_id
+		
+		FROM interest 
+		
+		WHERE id=#{id};
+	</select>
+	<!-- 다중행 조회를 위한 기능 정의 -->
+	<select id="selectList"
+		parameterType="study.spring.findhobby.model.interest"
+		resultMap="interestMap">
+		SELECT 
+		id,i_user_agent,i_browser,i_os,i_device,i_h_id
+		FROM interest
+
+		<where>
+		
+			<if test="i_user_agent != null and i_user_agent != ''">
+				i_user_agent LIKE concat('%', #{i_user_agent}, '%') 
+			</if>
+			
+		</where>
+
+		ORDER BY id ASC
+	</select>
+	
+	<!-- 관심취미 조회를 위한 기능 정의 -->
+	<select id="selectList_favpage"
+		parameterType="study.spring.findhobby.model.interest"
+		resultMap="interestMap">
+		SELECT 
+		id,i_user_agent,i_browser,i_os,i_device,i_h_id, i_h_name , i_h_image_a
+		FROM interest
+
+		<where>
+		
+			<if test="i_user_agent != null and i_user_agent != '' and
+			i_browser != null and i_browser != '' and
+			i_os != null and i_os != '' and
+			i_device != null and i_device != '' ">
+				i_user_agent LIKE concat('%', #{i_user_agent}, '%') AND 
+				i_browser LIKE concat('%', #{i_browser}, '%') AND
+				i_os LIKE concat('%', #{i_os}, '%') AND
+				i_device LIKE concat('%', #{i_device}, '%') 
+			</if>
+			
+		</where>
+		
+		ORDER BY id ASC
+	</select>
+	
+	
+	
+	<!-- 데이터 저장을 위한 기능 정의 -->
+	<insert id="insertItem"
+		parameterType="study.spring.findhobby.model.interest"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO interest 
+		(
+		
+		i_user_agent,i_browser,i_os,i_device,i_h_id, i_h_name , i_h_image_a
+		
+		) 
+		VALUES 
+		(
+		
+		#{i_user_agent},#{i_browser},#{i_os},#{i_device},#{i_h_id},#{i_h_name},#{i_h_image_a}
+		
+		);
+	</insert>
+	<!-- 데이터 삭제를 위한 기능 정의 -->
+	<delete id="deleteItem"
+		parameterType="study.spring.findhobby.model.interest">
+		DELETE FROM interest WHERE id=#{id};
+	</delete>
+	<!-- 데이터 갱신을 위한 기능 정의 -->
+	<update id="updateItem"
+		parameterType="study.spring.findhobby.model.interest">
+		
+		UPDATE interest SET  
+		
+		i_user_agent=#{i_user_agent},
+		i_browser=#{i_browser},
+		i_os=#{i_os},
+		i_device=#{i_device},
+		i_h_id=#{i_h_id},
+		i_h_name=#{i_h_name},
+		i_h_image_a=#{i_h_image_a}
+		
+		WHERE id=#{id};
+		
+	</update>
+	<!-- 조건에 맞는 데이터 수를 집계하여 int 타입으로 반환한다. count , max , min , sum , avg 함수를 
+		사용한 경우 Mapper 에서는 resultMap이 아닌 resultType 으로 반환한다. -->
+	<!-- 데이터 수 조회하기 -->
+	<select id="selectCountAll"
+		parameterType="study.spring.findhobby.model.interest"
+		resultType="int">
+		SELECT COUNT(*) FROM interest
+
+		<where>
+		
+			<if test="i_user_agent != null and i_user_agent != '' and
+			i_browser != null and i_browser != '' and
+			i_os != null and i_os != '' and
+			i_device != null and i_device != '' and
+			i_h_id != null and i_h_id != ''
+			">
+				i_user_agent LIKE concat('%', #{i_user_agent}, '%') AND 
+				i_browser LIKE concat('%', #{i_browser}, '%') AND
+				i_os LIKE concat('%', #{i_os}, '%') AND
+				i_device LIKE concat('%', #{i_device}, '%') AND 
+				i_h_id LIKE concat('%', #{i_h_id}, '%')
+			</if>
+			
+		</where>
+		
+	</select>
+
+</mapper>

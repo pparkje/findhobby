@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+/* 관리자 페이지 공지정보 부분 */
+
+.master_notice_see_cont {
+	width: 1600px;
+	height: 580px;
+	
+}
+
+.master_notice_see_cont_partA {
+	width: 250px;
+	float: left;
+}
+
+.master_notice_see_cont_partB {
+	width: 1000px;
+	float: left;
+}
+
+.master_notice_see_cont_partA li{
+	width: 100%;
+	border: 1px solid #eee;
+	font-size: 17px;
+	text-align: center;
+}
+
+.master_notice_see_cont_partB li{
+	width: 100%;
+	border: 1px solid #eee;
+	font-size: 17px;
+}
+
+.master_notice_see_cont_partA li:nth-child(1) {
+	height: 150px;
+	line-height: 150px;
+}
+
+.master_notice_see_cont_partA li:nth-child(2) {
+	height: 300px;
+	line-height: 300px;
+}
+
+.master_notice_see_cont_partA li:nth-child(3),
+.master_notice_see_cont_partA li:nth-child(4),
+.master_notice_see_cont_partB li:nth-child(3),
+.master_notice_see_cont_partB li:nth-child(4)
+ {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.master_notice_see_cont_partB_cont_sub {
+	height: 150px;
+}
+
+.master_notice_see_cont_partB_cont_sub_center {
+	width: 90%;
+	height: 140px;
+	margin: 20px auto 0 auto;
+}
+
+.master_notice_see_cont_partB_cont_cont {
+	height: 300px;
+}
+
+.master_notice_see_cont_partB_cont_cont_center {
+	width: 90%;
+	height: 290px;
+	margin: 20px auto 0 auto;
+}
+
+.master_notice_see_cont_partA li {
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

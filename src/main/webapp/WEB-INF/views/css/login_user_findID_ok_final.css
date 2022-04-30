@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/* 전체 부분 */
+.login_user_findID_ok_final_body {
+	width: 100%;
+	margin-top: 50px;
+}
+
+/* 전체 센터 부분 */
+
+.login_user_findID_ok_final_center {
+	width: 1200px;
+	margin: auto;
+}
+
+
+/* 아이디 찾기 제목 부분 */
+
+.login_user_findID_ok_final_sub {
+	width: 1000px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+
+/* 아이디 찾기 본문 부분 */
+
+.login_user_findID_ok_final_name_part,
+.login_user_findID_ok_final_email_part,
+.login_user_findID_ok_final_end_part {
+	width: 1000px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* 아이디 찾기 버튼 부분 */
+.login_user_findID_ok_final_button_part {
+	width: 1000px;
+	height: 100px;
+	margin-bottom: 150px;
+	margin-top: 50px;
+}
+
+.login_user_findID_ok_final_button_part a{
+	display: block;
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+	border: 1px solid #eee;
+	color: #333;
+}
+
+
+
+
+
+
+
+

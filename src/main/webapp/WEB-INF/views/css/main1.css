@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    --swiper-theme-color : #ccc;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/* 본문시작 */
+.body_body {
+	width : 100%;
+	position: relative;
+	margin-top: 50px;
+}
+
+/* 본문 센터  */
+.body_center {
+	width: 1200px;
+	margin: auto;
+}
+
+/* 배너 부분  */
+.swiper-container {
+	width: 750px;
+	height: 320px; 
+}
+
+.swiper-wrapper {
+	width: 750px;
+	height: 320px; 
+}
+
+.swiper-slide img{
+	width: 750px;
+	height: 320px; 
+}
+
+/* 추천 키워드 부분  */
+
+.best_keyword {
+	width: 1000px;
+	height: 150px;
+	margin-bottom: 50px;
+	margin-top: 100px;
+	margin: 100px auto 50px auto;
+}
+
+.best_keyword_sub {
+	width: 1000px;
+	height: 50px;
+	margin-bottom: 30px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.best_keyword_sub_favkeyword {
+	color: #333;
+}
+
+.best_keyword_cont {
+	width: 1000px;
+	height: 300px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.best_keyword_cont_sub li{
+	display : inline-block;
+	width: 100px;
+	height: 30px;
+	border: 1px solid #00f9da;
+	border-radius: 10px;
+	text-align: center;
+	line-height:30px;
+	margin-left: 50px;
+}
+
+.best_keyword_cont_sub li:first-child {
+	margin-left: 0;
+}
+
+.best_keyword_cont_sub button {
+	width: 100px;
+	height: 30px;
+	background: none;
+	color: #333;
+	font-size: 15px;
+	text-align: center;
+	line-height: 30px;
+	border: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* 취미 추천 파트1~3 */
+.hob_chu {
+	width: 1000px;
+	height: 250px;
+	margin: auto;
+}
+
+.hob_chu_sub {
+	width:  1000px;
+	height: 50px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+
+.hob_chu_cont {
+	width: 1000px;
+	height: 200px;
+}
+
+.hob_chu_cont_A {
+	width: 1000px;
+	height: 200px;
+}
+
+
+.hob_chu_list {
+	width: 150px;
+	float: left;
+	margin-right: 10px;
+}
+
+.hob_chu_img {
+	width: 150px;
+	height: 100px;
+}
+
+.hob_chu_list_sub {
+	color: #333;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+/* 취미 추천 파트4~6 */
+.hob_chu_none_A {
+	display: none;
+	width: 1000px;
+	height: 250px;
+	margin: auto;
+}
+.hob_chu_none_B {
+	display: none;
+	width: 1000px;
+	height: 250px;
+	margin: auto;
+}
+.hob_chu_none_C {
+	display: none;
+	width: 1000px;
+	height: 250px;
+	margin: auto;
+}
+
+/* more 버튼 */
+
+.more_A {
+	display: block;
+	width: 900px;
+	height: 100px;
+	margin: auto;
+	font-weight: bold;
+	font-size: 20px;
+	border-top: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.more_click {
+	line-height: 100px;
+	color: #00f9da;
+}
+
+
+
+
+
+

@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+
+/* 본문부분 */
+.master_qna_plus_cont {
+	width: 1600px;
+	height: 650px;
+}
+
+.master_qna_plus_cont_partA,
+.master_qna_plus_cont_partB{
+	width: 750px;
+	height: 650px;
+	float: left;
+}
+
+.master_qna_plus_cont_partB {
+	margin-left: 50px;
+}
+
+.master_qna_plus_cont_sub {
+	width: 750px;
+	height: 150px;
+	float: left;
+	margin-top: 20px;
+}
+
+.master_qna_plus_cont_cont,
+.master_qna_plus_cont_answer_cont {
+	width: 750px;
+	height: 300px;
+	float: left;
+	margin-top: 20px;
+}
+
+.master_qna_plus_cont_mid,
+.master_qna_plus_cont_answer_check,
+.master_qna_plus_cont_answer_aid{
+	width: 750px;
+	height: 40px;
+	float: left;
+	margin-top: 20px;
+}
+
+.master_qna_plus_cont_sub label,
+.master_qna_plus_cont_cont label,
+.master_qna_plus_cont_mid label,
+.master_qna_plus_cont_answer_check label,
+.master_qna_plus_cont_answer_aid label,
+.master_qna_plus_cont_answer_cont label
+{
+	display: block;
+	width: 200px;
+	height: 40px;
+	border: 1px solid #eee;
+	float: left;
+	text-align: center;
+	line-height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.master_qna_plus_cont_mid input,
+.master_qna_plus_cont_answer_check input,
+.master_qna_plus_cont_answer_aid input {
+	width: 400px;
+	height: 40px;
+	border:none;
+	border-bottom: 1px solid #eee;
+	float: left;
+	margin-left: 50px;
+}
+
+.master_qna_plus_cont_sub_textarea {
+	display: block;
+	width: 400px;
+	height: 150px;
+	border: 1px solid #eee;
+	float: left;
+	margin-left: 50px;
+	word-break: break-word;
+	word-wrap:break-word;
+	padding: 0 10px;
+}
+
+.master_qna_plus_cont_cont_textarea,
+.master_qna_plus_cont_answer_cont_textarea {
+	display: block;
+	width: 400px;
+	height: 300px;
+	border: 1px solid #eee;
+	float: left;
+	margin-left: 50px;
+	word-break: break-word;
+	word-wrap:break-word;
+	padding: 0 10px;
+}
+
+
+/* 취소 , 추가버튼 */
+.master_qna_plus_cont_cancel
+ {
+	display: block;
+	float:  left;
+	width: 200px;
+	height: 40px;
+	margin-left: 250px;
+	margin-top: 40px;
+}
+
+.master_qna_plus_cont_submit {
+	display: block;
+	float:  left;
+	width: 200px;
+	height: 40px;
+	margin-left: 100px;
+	margin-top: 40px;
+}
+
+.master_qna_plus_cont_cancel a,
+.master_qna_plus_cont_submit button{
+	display: block;
+	border: 1px solid #eee;
+	color: #333;
+	text-align: center;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	font-weight: bold
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

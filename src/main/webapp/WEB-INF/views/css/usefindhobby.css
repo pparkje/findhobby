@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/* 전체 부분 */
+.usefindhobby_body {
+	width: 100%;
+	margin-top: 50px;
+}
+
+/* 전체 센터 부분 */
+
+.usefindhobby_body_center {
+	width: 1200px;
+	margin: 0 auto 150px auto;
+}
+
+/* 이용안내 부분 */
+
+.usefindhobby_title {
+	width: 1000px;
+	height: 50px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.usefindhobby_title_two {
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+}
+
+
+/* 본문 부분 */
+.usefindhobby_cont_A {
+	height: 50px;
+	line-height: 50px;
+}
+
+.usefindhobby_find_img {
+	width: 100%;
+	height: 500px;
+}
+
+.usefindhobby_find_img img {
+	width: 100%;
+	height: 500px;
+}
+
+
+
+
+
+
+
+
+

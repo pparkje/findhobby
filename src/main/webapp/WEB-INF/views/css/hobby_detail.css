@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+/* 전체 부분 */
+.hobby_detail_body {
+	width: 100%;
+	margin-top: 50px;
+}
+
+/* 전체 센터 부분 */
+
+.hobby_detail_body_center {
+	width: 1200px;
+	margin: auto;
+}
+
+
+/* 취미 상세 페이지 제목 부분 */
+.hobby_detail_sub {
+	width: 1000px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+	margin: auto;
+}
+
+/* 모든 부분(BCD) 사이즈 설정 */
+
+.hobby_detail_cont_B,
+.hobby_detail_cont_C,
+.hobby_detail_cont_D
+ {
+	width: 1000px;
+	margin: 100px auto 0 auto;
+	
+}
+
+
+
+/* 취미 상세 페이지 본문 ( 이미지 , 설명 , 관심 등록 ) 부분 */
+.hobby_detail_cont_A {
+	width: 1000px;
+	height: 250px;
+	margin: 0 auto 0 auto;
+}
+
+.hobby_detail_cont_A_img {
+	width: 300px;
+	height: 200px;
+	display: block;
+	float: left;
+}
+
+.hobby_detail_cont_A_img img {
+	
+	width: 300px;
+	height: 200px;
+	border: 1px solid #eee;
+	
+}
+
+.hobby_detail_cont_A_cont {
+	display: block;
+	float: left;
+	width: 590px;
+	height: 140px;
+	border: 1px solid #eee;
+	position: relative;
+	margin-left: 50px;
+	margin-bottom: 10px;
+	padding: 0 20px;
+}
+
+.hobby_detail_cont_A_cont_textpart {
+	display: block;
+	width: 590px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.hobby_detail_cont_A_fav_button {
+	width: 590px;
+	height: 50px;
+	display: block;
+	float: left;
+	margin-left: 50px;
+	
+}
+
+.hobby_detail_cont_A_fav_button a{
+	display: block;
+	width: 590px;
+	height: 50px;
+	border: 1px solid #00f9da;
+	color: #333;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+	padding: 0 20px;
+}
+
+
+/* 취미 상세 페이지 본문 ( 관련유튜브 검색 ) 부분 */
+.hobby_detail_cont_B {
+	display: block;
+	width: 900px;
+	height: 100px;
+	margin: auto;
+	font-weight: bold;
+	font-size: 20px;
+	border-top: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.hobby_detail_cont_B_youtube {
+	line-height: 100px;
+	color: #00f9da;
+}
+
+
+/* 취미 상세 페이지 본문 ( 취미 여분 이미지 ) 부분 */
+.hobby_detail_cont_C {
+	height: 250px;
+}
+
+.hobby_detail_cont_C_picture_sub {
+	width: 1000px;
+	height: 50px;
+	line-height: 50px;
+	color: #333;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.hobby_detail_cont_C_picture_img {
+	width: 1000px;
+	height: 125px;
+	line-height: 125px;
+}
+
+.hobby_detail_cont_C_picture_img_list {
+	display: block;
+	float: left;
+	width: 150px;
+	height: 125px;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.hobby_detail_cont_C_picture_img_list img {
+	width: 150px;
+	height: 122px;
+	border: 1px solid #eee;
+}
+
+/* 취미 상세 페이지 본문 ( 연관취미 ) 부분 */
+.hobby_detail_cont_D {
+	height: 500px;
+}
+
+.hobby_detail_cont_D_sub {
+	width: 1000px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.hobby_detail_cont_D_find_similar {
+	width: 1000px;
+	height: 150px;
+}
+
+.hobby_detail_cont_D_find_similar_list {
+	width: 150px;
+	float: left;
+	margin-right: 10px;
+}
+
+.hobby_detail_cont_D_find_similar_list_img {
+	width: 150px;
+	height: 100px;
+	border: 1px solid #eee;
+}
+
+.hobby_detail_cont_D_find_similar_list_cont {
+	color: #333;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+

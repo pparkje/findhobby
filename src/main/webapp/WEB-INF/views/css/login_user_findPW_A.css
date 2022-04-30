@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+/* 전체 부분 */
+.PW_A_body {
+	width: 100%;
+	margin-top: 50px;
+}
+
+/* 전체 센터 부분 */
+
+.PW_A_body_center {
+	width: 1200px;
+	margin: auto;
+}
+
+/* 제목 부분 */
+.PW_A_sub {
+	width: 1000px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0 auto 50px auto;
+}
+
+/* form 태그 부분 */
+
+.PW_A_cont_part {
+	width: 1000px;
+	height: 800px;
+	margin: auto;
+}
+
+.PW_A_cont_part_idnameemail {
+	width: 1000px;
+	height: 100px;
+}
+
+.PW_A_cont_part_idnameemail_Last {
+	width: 1000px;
+	height: 100px;
+	margin-bottom: 50px;
+}
+
+.PW_A_cont_part_idnameemail label,
+.PW_A_cont_part_idnameemail_Last label {
+	display: block;
+	width: 200px;
+	height: 100px;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 100px;
+	float: left;
+}
+
+.PW_A_cont_part_idnameemail input,
+.PW_A_cont_part_idnameemail_Last input {
+	width: 600px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 15px;
+	margin: 20px 0 0 0;
+	float: left;
+}
+
+
+/* 취소 , 다음으로 버튼 */
+
+.PW_A_cont_part_cancel,
+.PW_A_cont_part_submit {
+	width: 200px;
+	height: 100px;
+	float: left;
+}
+.PW_A_cont_part_submit {
+	margin-left: 100px;
+}
+
+.PW_A_cont_part_cancel a {
+	display: block;
+	width: 200px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	border: 1px solid #eee;
+	color: #333;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.PW_A_cont_part_submit button {
+	display: block;
+	width: 200px;
+	height: 60px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+	border: 1px solid #00f9da;
+	background: none;
+	cursor: pointer;
+}
+
+
+
+
+
+/* PW 찾기 2단계  */
+
+.PW_B_sub {
+	width: 1000px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+	margin: auto;
+}
+
+.PW_B_sub_sub {
+	width: 1000px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 20px;
+	font-weight: bold;
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

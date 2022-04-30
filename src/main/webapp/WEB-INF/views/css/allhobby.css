@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+/* 전체 부분 */
+.allhobby_body {
+	width: 100%;
+	margin-top: 50px;
+	min-height: 3000px;
+}
+
+/* 전체 센터 부분 */
+
+.allhobby_body_center {
+	width: 1200px;
+	margin: 0 auto 150px auto;
+}
+
+/* allhobby 취미 타이틀 부분 */
+.allhobby_title_A {
+	height: 50px;
+	line-height: 50px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.allhobby_title_B {
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 70px;
+}
+
+/* allhobby 취미 이미지 부분 */
+
+.allhobby_list {
+	width: 1200px;
+	margin: auto;
+}
+
+.allhobby_list_cont {
+	width: 1200px;
+	margin: auto;
+}
+
+.allhobby_list_cont_list {
+	display: inline-block;
+}
+
+.allhobby_list_cont_list:nth-child(odd) {
+	width: 220px;
+	height: 150px;
+	border: 1px solid #00f9da;
+}
+
+.allhobby_list_cont_list:nth-child(even) {
+	width: 220px;
+	height: 200px;
+	border: 1px solid #00f9da;
+}
+
+.allhobby_list_cont_list_img {
+	width: 150px;
+	height: 100px;
+	border: 1px solid #eee;
+	display: block;
+	margin: 15px auto 0 auto;
+}
+
+.allhobby_list_cont_list:nth-child(odd) div{
+	width: 220px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.allhobby_list_cont_list:nth-child(even) div{
+	width: 220px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+}
+
+.allhobby_list_cont_list_sub {
+	color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/* 전체 부분 */
+.login_user_IDPW_body {
+	width: 100%;
+	margin-top: 50px;
+}
+
+/* 전체 센터 부분 */
+
+.login_user_IDPW_center {
+	width: 1200px;
+	height: 800px;
+	margin: auto;
+}
+
+/* ID / PW 제목 부분 */
+
+.login_user_IDPW_sub {
+	width: 1000px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+	margin: auto;
+}
+
+/* ID / PW 본문 부분 */
+
+.login_user_IDPW_part {
+	width: 1005px;
+	height: 600px;
+	margin: auto;
+}
+
+.login_user_IDPW_ID_part,
+.login_user_IDPW_PW_part {
+	width: 500px;
+	height: 500px;
+	line-height:500px;
+	border: 1px solid #eee;
+	font-size: 50px;
+	font-weight: bold;
+	float: left;
+	text-align: center;
+}
+
+.login_user_IDPW_ID_part a,
+.login_user_IDPW_PW_part a {
+	color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

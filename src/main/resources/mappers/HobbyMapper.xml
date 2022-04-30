@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="HobbyMapper">
+	<!-- Beans 클래스의 객체이름(id)과 클래스이름(type)을 명시한다. -->
+	<resultMap id="hobbyMap"
+		type="study.spring.findhobby.model.hobby">
+		<!-- Beans의 멤버변수(property)이름과 대상 테이블의 컬럼(column)을 연결한다. -->
+		<result property="id" column="id" />
+		<result property="h_name" column="h_name" />
+		<result property="h_image_a" column="h_image_a" />
+		<result property="h_image_b" column="h_image_b" />
+		<result property="h_option" column="h_option" />
+		<result property="h_cont" column="h_cont" />
+		<result property="h_joindate" column="h_joindate" />
+		<result property="h_modifydate" column="h_modifydate" />
+		<result property="h_count" column="h_count" />
+		
+	</resultMap>
+
+	<!-- 단일행 조회를 위한 기능 정의 -->
+	<select id="selectItem"
+		parameterType="study.spring.findhobby.model.hobby"
+		resultMap="hobbyMap">
+		SELECT 
+		id, h_name, h_image_a, h_image_b , h_option , h_cont , h_joindate , h_modifydate , h_count
+		FROM hobby WHERE id=#{id};
+	</select>
+	<!-- 다중행 조회를 위한 기능 정의 -->
+	<select id="selectList"
+		parameterType="study.spring.findhobby.model.hobby"
+		resultMap="hobbyMap">
+		SELECT 
+		id, h_name, h_image_a, h_image_b , h_option , h_cont , h_joindate , h_modifydate , h_count 
+		FROM hobby
+
+		<where>
+		
+			<if test="h_name != null and h_name != ''">
+				h_name LIKE concat('%', #{h_name}, '%') 
+			</if>
+			
+		</where>
+			ORDER BY id ASC
+			
+		
+	</select>
+	
+	<!-- 관리자 페이지 취미 조회 -->
+	<select id="selectList_master"
+		parameterType="study.spring.findhobby.model.hobby"
+		resultMap="hobbyMap">
+		SELECT 
+		id, h_name, h_image_a, h_image_b , h_option , h_cont , h_joindate , h_modifydate , h_count 
+		FROM hobby
+
+		<where>
+		
+			<if test="h_name != null and h_name != '' and
+				h_option != null and h_option != '' and
+				h_cont != null and h_cont != '' ">
+				h_name LIKE concat('%', #{h_name}, '%') OR 
+				h_option LIKE concat('%', #{h_option}, '%') OR 
+				h_cont LIKE concat('%', #{h_cont}, '%') 
+			</if>
+			
+		</where>
+		
+		ORDER BY id ASC
+		
+		<if test="listCount > 0" >
+		LIMIT #{offset}, #{listCount}
+		</if>	
+		
+	</select>
+	
+	<!-- 검색페이지를 위한 기능 정의 -->
+	<select id="selectList_find_detail"
+		parameterType="study.spring.findhobby.model.hobby"
+		resultMap="hobbyMap">
+		SELECT 
+		id, h_name, h_image_a, h_image_b , h_option , h_cont , h_joindate , h_modifydate , h_count 
+		FROM hobby
+
+		<where>
+		
+			<if test="h_name != null and h_name != '' 
+			and h_option != null and h_option != '' 
+			">
+				h_name LIKE concat('%', #{h_name}, '%') OR h_option LIKE concat('%', #{h_option}, '%') LIMIT 6
+			</if>
+			
+		</where>
+		<choose>
+		
+			<when test="h_name != null and h_name != '' 
+			and h_option != null and h_option != '' 
+			">
+			
+			</when>
+			
+			<otherwise>
+			LIMIT 6
+			</otherwise>
+			
+		</choose>
+		
+	</select>
+	
+	<!-- 인기 취미 관련 조회  -->
+	<select id="selectList_populhobby"
+		parameterType="study.spring.findhobby.model.hobby"
+		resultMap="hobbyMap">
+		SELECT 
+		id, h_name, h_image_a, h_image_b , h_option , h_cont , h_joindate , h_modifydate , h_count 
+		FROM hobby
+		ORDER BY h_count DESC;
+	</select>
+	
+	<!-- 취미 상세 조회 => 유사취미 검색 조회부분 -->
+	<select id="selectList_similar_hobby"
+		parameterType="study.spring.findhobby.model.hobby"
+		resultMap="hobbyMap">
+		
+		SELECT 
+		id, h_name, h_image_a, h_image_b , h_option , h_cont , h_joindate , h_modifydate , h_count 
+		FROM hobby
+		ORDER BY h_option = #{h_option} DESC;
+		
+	</select>
+	
+	<!-- 데이터 저장을 위한 기능 정의 -->
+	<insert id="insertItem"
+		parameterType="study.spring.findhobby.model.hobby"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO hobby (
+		h_name,h_image_a,h_image_b,h_option,h_cont,h_joindate,h_modifydate,h_count
+		)
+		VALUES (
+		#{h_name},#{h_image_a},#{h_image_b},#{h_option},#{h_cont}, DATE_FORMAT(now(), '%Y-%m-%d'), DATE_FORMAT(now(), '%Y-%m-%d'),0
+		)
+	</insert>
+	
+	<!-- 데이터 삭제를 위한 기능 정의 -->
+	<delete id="deleteItem"
+		parameterType="study.spring.findhobby.model.hobby">
+		DELETE FROM hobby WHERE id=#{id};
+	</delete>
+	
+	<!-- 데이터 갱신을 위한 기능 정의 -->
+	<update id="updateItem"
+		parameterType="study.spring.findhobby.model.hobby">
+		
+		UPDATE hobby SET  
+		
+		h_name = #{h_name}, h_image_a = #{h_image_a}, h_image_b = #{h_image_b}, 
+		h_option = #{h_option}, h_cont = #{h_cont},  
+		h_modifydate = DATE_FORMAT(now(), '%Y-%m-%d')
+		
+		WHERE id=#{id};
+		
+	</update>
+	
+	<!-- 조회수 처리를 위한 기능 정의 -->
+	<update id="updateItem_count"
+		parameterType="study.spring.findhobby.model.hobby">
+		
+		UPDATE hobby SET  
+		
+		h_count = #{h_count} + 1
+		
+		WHERE id=#{id};
+		
+	</update>
+	
+	
+	
+	<!-- 조건에 맞는 데이터 수를 집계하여 int 타입으로 반환한다. count , max , min , sum , avg 함수를 
+		사용한 경우 Mapper 에서는 resultMap이 아닌 resultType 으로 반환한다. -->
+	<!-- 데이터 수 조회하기 -->
+	<select id="selectCountAll"
+		parameterType="study.spring.findhobby.model.hobby"
+		resultType="int">
+		SELECT COUNT(*) FROM hobby
+
+		<where>
+			<if test="h_name != null and h_name != ''">
+				h_name LIKE concat('%', #{h_name}, '%')
+			</if>
+
+			<if test="h_count != null and h_count != ''">
+				OR h_count LIKE concat('%', #{h_count}, '%')
+			</if>
+		</where>
+		
+	</select>
+	
+	
+	<!-- 관리자페이지 관련 데이터 수 조회 -->
+	<select id="selectCountAll_master"
+		parameterType="study.spring.findhobby.model.hobby"
+		resultType="int">
+		SELECT COUNT(*) FROM hobby
+
+		<where>
+			
+			<if test="h_name != null and h_name != '' and
+				h_option != null and h_option != '' and
+				h_cont != null and h_cont != '' ">
+				h_name LIKE concat('%', #{h_name}, '%') OR 
+				h_option LIKE concat('%', #{h_option}, '%') OR 
+				h_cont LIKE concat('%', #{h_cont}, '%') 
+			</if>
+			
+		</where>
+		
+	</select>
+
+</mapper>

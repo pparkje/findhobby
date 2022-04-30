@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+.favhobby_body {
+	width: 100%;
+}
+
+.favhobby_body_center {
+	width: 1200px;
+	min-height: 400px; 
+	margin: auto;
+}
+/* 관심취미 타이틀 부분 */
+.favhobby_title {
+	width: 1000px;
+	height: 100px;
+	margin: 0 auto 50px auto;
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 100px;
+	
+}
+
+/* 관심 찾기로 넘어가는 부분 */
+.no_favhobby {
+	width: 1000px;
+	height: 200px;
+	background-color: #eee;
+	font-size: 20px;
+	margin: auto;
+}
+
+.find_hobby_favhobby {
+	display: block;
+	width: 1000px;
+	height: 200px;
+	line-height: 200px;
+	color: #333;
+	text-align: center;
+	margin: auto;
+}
+
+/* 관심취미로 등록해놓은것들 리스트 부분 */
+.yes_favhobby {
+	width: 1000px;
+	min-height: 400px;
+	margin: 50px auto 0 auto;
+}
+
+.yes_favhobby_list {
+	display: block;
+	float: left;
+	width: 150px;
+	margin-right: 10px;
+	margin-top: 30px;
+}
+.yes_favhobby_list a {
+	color: #333;
+}
+
+.yes_favhobby_tag {
+	display: block;
+}
+
+.yes_favhobby_img {
+	width: 150px;
+	height: 100px;
+}
+
+.yes_favhobby_cont {
+	width: 150px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+/* 전체 부분 */
+.popularity_hobby_body {
+	width: 100%;
+	margin-top: 50px;
+}
+
+/* 전체 센터 부분 */
+
+.popularity_hobby_body_center {
+	width: 1200px;
+	margin: auto;
+}
+
+/* 인기 top10 제목 부분 */
+
+.popularity_hobby_sub {
+	width: 1000px;
+	height: 100px;
+	line-height: 100px;
+	font-weight: bold;
+	font-size: 30px;
+	margin-bottom: 50px;
+}
+
+
+/* 인기 top10 본문 부분 */
+.popularity_hobby_cont {
+	width: 1000px;
+	height: 2000px;
+}
+
+/* 인기 top10 리스트 부분 */
+
+.popularity_hobby_cont_A {
+	width: 1000px;
+}
+
+.popularity_hobby_list {
+	width: 1000px;
+	height: 125px;
+	margin-top: 30px;
+	border-top:  1px solid #eee;
+	padding-top: 30px;
+}
+
+.popularity_hobby_list a {
+	color: #333;	
+}
+
+/* 조회수 1위 , 이미지 , 조회수 카운트 부분 */
+.popularity_hobby_list_rank,
+.popularity_hobby_list_imgsub,
+.popularity_hobby_list_count {
+	width: 150px;
+	height: 125px;
+	line-height: 125px;
+	float: left;
+	text-align: center;
+}
+
+.popularity_hobby_list_img {
+	display: block;
+	width: 150px;
+	height: 100px;
+	float: left;
+}
+
+.popularity_hobby_list_sub {
+	display: block;
+	width: 150px;
+	height: 20px;
+	line-height: 20px;
+	float: left;
+	color: #333;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+/* 설명 부분 */
+.popularity_hobby_list_cont {
+	display: block;
+	width: 450px;
+	height: 125px;
+	line-height: 125px;
+	float: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-left: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/* 전체 부분 */
+.question_body {
+	width: 100%;
+	margin-top: 50px;
+}
+
+/* 전체 센터 부분 */
+
+.question_body_center {
+	width: 1200px;
+	margin: auto;
+}
+
+/* 제목 부분 */
+.question_sub {
+	width: 1000px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+	margin: auto;
+}
+
+
+/* 문의사항 입력하는 부분 */
+.question_cont {
+	width: 1000px;
+	height: 1000px;
+	margin: auto;
+}
+
+.question_cont_sub,
+.question_cont_contsub{
+	width: 1000px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px 0;
+}
+
+.question_cont_subtext
+ {
+	width: 1000px;
+	height: 100px;
+}
+
+.question_cont_subtext_input {
+	width: 700px;
+	margin: auto;
+	height: 100px;
+	font-size: 15px;
+	border: 1px solid #eee;
+}
+
+
+.question_cont_conttext {
+	width: 1000px;
+	height: 400px;
+}
+
+.question_cont_conttext_input {
+	width: 700px;
+	margin: auto;
+	height: 400px;
+	font-size: 15px;
+	border: 1px solid #eee;
+}
+
+.question_cont_btn {
+	width: 700px;
+	height: 70px;
+	margin-bottom: 200px;
+	margin-top: 50px;
+}
+
+.question_cont_btn button{
+	width: 700px;
+	height: 70px;
+	line-height: 70px;
+	border: 1px solid #eee;
+	color: #333;
+	background: #00f9da;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
