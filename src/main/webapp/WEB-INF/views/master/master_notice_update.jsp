@@ -39,7 +39,7 @@
 				</div>
 				
 				<div class="master_notice_plus_cont_submit">
-					<button type="submit">취미수정하기</button>
+					<button type="submit">공지수정하기</button>
 				</div>
 			</form>
 		</div>

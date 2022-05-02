@@ -130,6 +130,7 @@
 .hob_chu_img {
 	width: 150px;
 	height: 100px;
+	border: 1px solid #eee;
 }
 
 .hob_chu_list_sub {

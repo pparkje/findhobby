@@ -73,6 +73,9 @@
 	margin-top: 7px;
 	margin-left:10px;
 	float: left;
+	border: none;
+	background: white;
+	cursor: pointer;
 }
 .search_icon img {
 	width: 25px;

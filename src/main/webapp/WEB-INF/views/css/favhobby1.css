@@ -64,6 +64,7 @@
 .yes_favhobby_img {
 	width: 150px;
 	height: 100px;
+	border: 1px solid #eee;
 }
 
 .yes_favhobby_cont {

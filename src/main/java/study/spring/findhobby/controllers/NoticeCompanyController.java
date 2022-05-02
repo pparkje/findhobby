@@ -289,7 +289,7 @@ public class NoticeCompanyController {
 			return new ModelAndView("login");
 	}
 	
-	// 1:1 문의 로그인 페이지로 이동
+	// 1:1 문의 페이지로 이동
 	@RequestMapping(value = "/usercenter_question.do", method = RequestMethod.GET)
 	public ModelAndView usercenter_question(Model model, HttpServletRequest request
 			) {
@@ -322,7 +322,7 @@ public class NoticeCompanyController {
 			return new ModelAndView("usercenter_question");
 	}
 	
-	// 1:1 문의 로그인 페이지로 이동
+	// 1:1 문의 확인페이지로 이동
 	@RequestMapping(value = "/usercenter_question_ok.do", method = RequestMethod.POST)
 	public ModelAndView usercenter_question_ok(Model model, HttpServletRequest request,
 			@RequestParam(value = "q_m_num" , defaultValue =  "0") int q_m_num,

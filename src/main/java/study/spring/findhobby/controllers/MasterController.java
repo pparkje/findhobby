@@ -56,7 +56,7 @@ public class MasterController {
 	@Value("#{servletContext.contextPath}")
 	String contextPath;
 	
-	// 회원 추가 페이지
+	// 관리자 로그아웃처리
 	@RequestMapping(value = "/master/master_logout.do", method = RequestMethod.GET)
 	public ModelAndView master_logout(Model model,
 			HttpServletRequest request
@@ -443,7 +443,6 @@ public class MasterController {
 		
 		
 		//취미 상세 페이지
-		// 관리자 페이지 회원 정보 상세 페이지
 		
 		@RequestMapping(value = "/master/master_hobby_see.do", method = RequestMethod.GET)
 		public ModelAndView master_hobby_see(Model model,
@@ -942,7 +941,6 @@ public class MasterController {
 			return new ModelAndView("/master/master_notice_update");
 			
 		}		
-		
 		@RequestMapping(value = "/master/master_notice_update_ok.do", method = RequestMethod.POST)
 		public ModelAndView master_notice_update_ok(Model model,
 				@RequestParam(value = "id" , defaultValue =  "0") int id,

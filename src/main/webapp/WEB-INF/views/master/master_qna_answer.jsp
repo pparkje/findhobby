@@ -10,7 +10,7 @@
 <!-- 이곳에 HTML 코딩 진행  -->
 <div class="master_hobby_plus_body">
 		
-		<div class="master_hobby_plus_sub">공지답변</div>
+		<div class="master_hobby_plus_sub">문의답변</div>
 		
 		<div class="master_qna_plus_cont">
 			<form action="${pageContext.request.contextPath}/master/master_qna_answer_ok.do" method="post" >

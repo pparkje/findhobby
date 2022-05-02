@@ -47,31 +47,25 @@
 						고객센터
 					</a>
 				</li>
-				
 				<% 
 	    		
                     	if(key_footer == null){ 
                 %>
-				
 				<il class="footer_right_up_last">
 					<a class="banner_icon" href="${pageContext.request.contextPath}/login.do" >
 						1:1문의
 					</a>
 				</il>
-				
 				<% }else{ 
                     	
                     	session.setAttribute("key", key_footer);
                 %>
-				
 				<il class="footer_right_up_last">
 					<a class="banner_icon" href="${pageContext.request.contextPath}/usercenter_question.do" >
 						1:1문의
 					</a>
 				</il>
-				
 				 <% } %>
-				
 			</ul>
 			<ul class="footer_right_down">
 				<il class="footer_right_down_icon_A">

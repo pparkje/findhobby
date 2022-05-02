@@ -10,7 +10,7 @@
 <!-- 이곳에 HTML 코딩 진행  -->
 <div class="master_user_see_body">
 		
-	<div class="master_user_see_sub">공지정보</div>
+	<div class="master_user_see_sub">문의정보</div>
 		
 	<div class="master_qna_see_contA">
 			
@@ -65,7 +65,7 @@
 		</c:url>
 		
 		<a href="${master_qna_update_URL}" >
-   		공지수정하기
+   		문의수정하기
    		</a>
 	</div>
 		
@@ -76,7 +76,7 @@
 		</c:url>
 		
 		<a href="${master_qna_delete_URL}" >
-    	공지 삭제 처리
+    	문의 삭제 처리
     	</a>
 	</div>
 	

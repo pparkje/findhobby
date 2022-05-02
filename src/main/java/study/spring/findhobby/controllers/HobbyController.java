@@ -79,6 +79,7 @@ public class HobbyController {
 		
 		model.addAttribute("output_findhobby_list",output_findhobby_list);
 		model.addAttribute("output_findhobby_list_A",output_findhobby_list_A);
+		model.addAttribute("keyword",search_text);
 		
 		
 		return new ModelAndView("findhobby");
@@ -405,7 +406,7 @@ public class HobbyController {
 		return new ModelAndView("hobby_test_C");
 	}
 
-	// 취미 테스트 페이지C로 이동
+	// 취미 테스트 페이지D로 이동
 	@RequestMapping(value = "/hobby_test_D.do", method = RequestMethod.POST)
 	public ModelAndView hobby_test_D(Model model,HttpServletRequest request,
 			@RequestParam(value = "test_A" , required = false) String test_A,
@@ -428,7 +429,7 @@ public class HobbyController {
 		return new ModelAndView("hobby_test_D");
 	}
 	
-	// 취미 테스트 페이지C로 이동
+	// 취미 테스트 페이지결과로 이동
 	@RequestMapping(value = "/hobby_test_result.do", method = RequestMethod.POST)
 	public ModelAndView hobby_test_result(Model model,HttpServletRequest request,
 			@RequestParam(value = "test_A" , required = false) String test_A,

@@ -428,124 +428,123 @@ public class LoginController {
 	}
 	
 	// PW 찾기 페이지 2로 이동
-		@RequestMapping(value = "/login_user_findPW_B.do", method = RequestMethod.GET)
-		public ModelAndView login_user_findPW_B(Model model,
-				HttpServletRequest request
-				) {
+	@RequestMapping(value = "/login_user_findPW_B.do", method = RequestMethod.GET)
+	public ModelAndView login_user_findPW_B(Model model,
+			HttpServletRequest request
+			) {
+		
+		HttpSession session  = request.getSession();
+		String pw_ok = (String) session.getAttribute("pw_ok");
+		members key = (members) session.getAttribute("key");
 			
-			HttpSession session  = request.getSession();
-			String pw_ok = (String) session.getAttribute("pw_ok");
-			members key = (members) session.getAttribute("key");
-			
-			session.setAttribute("pw_ok", pw_ok);
-			session.setAttribute("key", key);
+		session.setAttribute("pw_ok", pw_ok);
+		session.setAttribute("key", key);
 				
-			return new ModelAndView("login_user_findPW_B");
-		}
+		return new ModelAndView("login_user_findPW_B");
+	}
 	
 	// PW 찾기 페이지 3로 이동전 검사
-		@RequestMapping(value = "/findPW_B_ok.do", method = RequestMethod.POST)
-		public ModelAndView findPW_B_ok(Model model,
-				HttpServletRequest request,
-				@RequestParam(value = "pass_code" , required = false) String pass_code
-				) {
-			
+	@RequestMapping(value = "/findPW_B_ok.do", method = RequestMethod.POST)
+	public ModelAndView findPW_B_ok(Model model,
+			HttpServletRequest request,
+			@RequestParam(value = "pass_code" , required = false) String pass_code
+			) {
+		
 			HttpSession session  = request.getSession();
 			String pw_ok = (String) session.getAttribute("pw_ok");
 			members key = (members) session.getAttribute("key");
-			
+				
 			String A = String.valueOf(pw_ok.trim());
 			String B = String.valueOf(pass_code.trim());
-			
-			
+				
+				
 			if(pass_code.equals("")) 				{ return webHelper.redirect(null, "인증번호를 입력하세요. passcode no insert_PW_B"); }
-			
+				
 			if(pw_ok == null) {
 				return webHelper.redirect(null, "개발자에게 문의하세요. AHAH coming no passcode");
 			}
-
+	
 			if(!(A.equals(B))) {
 				return webHelper.redirect(null, "인증번호키를 확인 후 다시 입력해 주세요. password != passcode");
 			}
-			
+				
 			session.setAttribute("key", key);
-			
+				
 			String redirectUrl = contextPath + "/login_user_findPW_C.do";
 			return webHelper.redirect(redirectUrl, "인증번호가 확인 되었습니다. passcode ok");
-		}
+	}
 		
-		// PW 찾기 페이지 3로 이동
-				@RequestMapping(value = "/login_user_findPW_C.do", method = RequestMethod.GET)
-				public ModelAndView login_user_findPW_C(Model model,
-						HttpServletRequest request
-						) {
+	// PW 찾기 페이지 3로 이동
+	@RequestMapping(value = "/login_user_findPW_C.do", method = RequestMethod.GET)
+	public ModelAndView login_user_findPW_C(Model model,
+			HttpServletRequest request
+				) {
 					
-					HttpSession session  = request.getSession();
-					String pw_ok = (String) session.getAttribute("pw_ok");
-					members key = (members) session.getAttribute("key");
+				HttpSession session  = request.getSession();
+				String pw_ok = (String) session.getAttribute("pw_ok");
+				members key = (members) session.getAttribute("key");
 					
-					session.setAttribute("pw_ok", pw_ok);
-					session.setAttribute("key", key);
-						
-					return new ModelAndView("login_user_findPW_C");
-				}
+				session.setAttribute("pw_ok", pw_ok);
+				session.setAttribute("key", key);
+					
+				return new ModelAndView("login_user_findPW_C");
+	}
 	
 		
-		// PW 찾기 페이지 마지막 비밀번호 변경 후 로그인 페이지로 이동
-				@RequestMapping(value = "/findPW_C_ok.do", method = RequestMethod.POST)
-				public ModelAndView findPW_C_ok(Model model,
-						HttpServletRequest request,
-						@RequestParam(value = "m_pw_A" , required = false) String m_pw_A,
-						@RequestParam(value = "m_pw_B" , required = false) String m_pw_B
-						) {
+	// PW 찾기 페이지 마지막 비밀번호 변경 후 로그인 페이지로 이동
+	@RequestMapping(value = "/findPW_C_ok.do", method = RequestMethod.POST)
+	public ModelAndView findPW_C_ok(Model model,
+			HttpServletRequest request,
+			@RequestParam(value = "m_pw_A" , required = false) String m_pw_A,
+			@RequestParam(value = "m_pw_B" , required = false) String m_pw_B
+			) {
 					
-					HttpSession session  = request.getSession();
-					String pw_ok = (String) session.getAttribute("pw_ok");
-					members key = (members) session.getAttribute("key");
-					int A = key.getId();
+			HttpSession session  = request.getSession();
+			String pw_ok = (String) session.getAttribute("pw_ok");
+			members key = (members) session.getAttribute("key");
+			int A = key.getId();
 					
-					if(m_pw_A == null) {
-						return webHelper.redirect(null, "패스워드를 입력해주세요. AHAH coming no password_A");
-					}
+			if(m_pw_A == null) {
+				return webHelper.redirect(null, "패스워드를 입력해주세요. AHAH coming no password_A");
+			}
 					
-					if(m_pw_B == null) {
-						return webHelper.redirect(null, "패스워드를 한번더 입력해주세요. AHAH coming no password_B");
-					}
+			if(m_pw_B == null) {
+				return webHelper.redirect(null, "패스워드를 한번더 입력해주세요. AHAH coming no password_B");
+			}
 					
-					if(key == null) {
-						return webHelper.redirect(null, "개발자에게 문의하세요. AHAH coming no member code");
-					}
+			if(key == null) {
+				return webHelper.redirect(null, "개발자에게 문의하세요. AHAH coming no member code");
+			}
 					
-					if(!regexHelper.isEngNum(m_pw_A)) 	{ return webHelper.redirect(null, "비밀번호는 영어와 숫자로만 가능합니다. pw2"); }
-					if(!regexHelper.isEngNum(m_pw_B)) 	{ return webHelper.redirect(null, "비밀번호는 영어와 숫자로만 가능합니다. pw2"); }
-					
-					String pwA = (String)m_pw_A;
-					String pwB = (String)m_pw_B;
-					if(!(pwA.equals(pwB))) 						{ return webHelper.redirect(null, "비밀번호를 확인해주세요. pwa != pwb"); }
-					
-					
-					members input_A = new members();
-					input_A.setId(A);
-					input_A.setM_pw(m_pw_A);
+			if(!regexHelper.isEngNum(m_pw_A)) 	{ return webHelper.redirect(null, "비밀번호는 영어와 숫자로만 가능합니다. pw2"); }
+			if(!regexHelper.isEngNum(m_pw_B)) 	{ return webHelper.redirect(null, "비밀번호는 영어와 숫자로만 가능합니다. pw2"); }
+				
+			String pwA = (String)m_pw_A;
+			String pwB = (String)m_pw_B;
+			if(!(pwA.equals(pwB))) 						{ return webHelper.redirect(null, "비밀번호를 확인해주세요. pwa != pwb"); }
 					
 					
-					try {
+			members input_A = new members();
+			input_A.setId(A);
+			input_A.setM_pw(m_pw_A);
+					
+					
+			try {
+				
+				membersService.editMembers_password(input_A);
 						
-						membersService.editMembers_password(input_A);
+			} catch (Exception e) {
 						
-					} catch (Exception e) {
+				return webHelper.redirect(null, e.getLocalizedMessage());
 						
-						return webHelper.redirect(null, e.getLocalizedMessage());
-						
-					}
+			}
 					
-					session.invalidate();
-					
-					String redirectUrl = contextPath + "/login.do";
-					return webHelper.redirect(redirectUrl, "비밀번호가 변경되었습니다. password change");
-				}
-	
-	
+			session.invalidate();
+				
+			String redirectUrl = contextPath + "/login.do";
+			return webHelper.redirect(redirectUrl, "비밀번호가 변경되었습니다. password change");
+	}
+		
 	
 	
 	

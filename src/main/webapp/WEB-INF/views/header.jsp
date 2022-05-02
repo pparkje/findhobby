@@ -15,12 +15,12 @@
 <!-- css 참조 -->
 <%-- <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/findhobby.css?ver=2" /> --%>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/reset.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/header.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/main1.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/header1.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/main.css" />
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/footer.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/favhobby.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/favhobby1.css" />
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/login.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/findhobby.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/findhobby1.css" />
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/noticecompany.css" />
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/usefindhobby.css" />
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/views/css/allhobby.css" />
@@ -70,27 +70,31 @@
     	<div class="header_center">
     		<!-- 아이콘 로그인 부분  -->
     		<div class="header_top">
+    		
 	    		<!-- 아이콘부분 -->
 	    		<div class="icon">
 	    			<a class="icon_A" href="${pageContext.request.contextPath}/main.do" >
 	    				<img class="icon_img" src="${pageContext.request.contextPath}/views/img/mk_6.PNG" />
 	    			</a>
 	    		</div>
+	    		
 	    		<!-- 검색부분 -->
 	    		<div class="search">
 	    			<form class="search_main" action="${pageContext.request.contextPath}/findhobby.do" method="post"/>
-		    			<a class="search_icon" href="${pageContext.request.contextPath}/findhobby.do">
+		    			<button class="search_icon" type="submit">
 		    				<img alt="검색" src="${pageContext.request.contextPath}/views/img/icon_magnifier_black.png" />
-		    			</a>
-		    			<input class="search_text" type="text" placeholder=" ex) 음악 , 운동" name="search_text" id="search_text" />
+		    			</button>
+		    			<input class="search_text" type="text" placeholder=" ex) 음악 , 운동" name="search_text" id="search_text" value="${keyword}"/>
 	    			</form>
 	    		</div>
+	    		
 	    		<!-- 관심부분 -->
 	    		<div class="interest_A">
 	    			<a class="interest_icon" href="${pageContext.request.contextPath}/favhobby_fav.do">
 	    				관심취미
 	    			</a>
 	    		</div>
+	    		
 	    		<!-- 로그인 부분 -->
 	    		
 	    		<% 
